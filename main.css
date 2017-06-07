@@ -1,0 +1,99 @@
+/*------------------------------------
+	GENERAL
+------------------------------------*/
+* {
+  box-sizing: border-box; }
+
+body {
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: dimgray;
+  background: lightgray;
+  text-align: center; }
+
+.visually-hidden {
+  /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; }
+
+body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .visually-hidden button {
+  display: none !important; }
+
+a {
+  text-decoration: none;
+  color: dimgray; }
+
+/*------------------------------------
+	HOME PAGE - NAVIGATION
+------------------------------------*/
+nav {
+  padding: 20px;
+  height: 80px;
+  background: lightgray; }
+  nav p:nth-child(1) {
+    float: left;
+    font-weight: bold; }
+  nav p:nth-child(2) {
+    float: right; }
+
+/*------------------------------------
+	HOME PAGE - HEADER
+------------------------------------*/
+header {
+  padding: 20px; }
+  header h1 {
+    font-weight: 300; }
+  header button {
+    width: 250px;
+    height: 50px;
+    margin: 10px 0;
+    font-weight: bold;
+    background: white;
+    border: none; }
+  header div {
+    height: 300px;
+    background: gray;
+    color: white;
+    margin: 50px 0 0 0;
+    padding: 140px 0 0 0; }
+
+/*------------------------------------
+	HOME PAGE - FEATURES
+------------------------------------*/
+.features-section {
+  padding: 20px; }
+
+.feature-box div {
+  height: 250px;
+  background: white;
+  color: dimgray;
+  margin: 50px 0 0 0;
+  padding: 120px 0 0 0; }
+
+/*------------------------------------
+	FOOTER
+------------------------------------*/
+footer {
+  color: white;
+  background: dimgray;
+  padding: 20px;
+  height: 80px;
+  width: 100%; }
+  footer .fa {
+    color: white;
+    padding: 0 5px; }
+  footer p {
+    float: left;
+    margin-top: 10px; }
+  footer .social-media-icons {
+    float: right; }
+
+/*# sourceMappingURL=main.css.map */
