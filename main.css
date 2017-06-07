@@ -12,6 +12,9 @@ body {
   background: lightgray;
   text-align: center; }
 
+button {
+  cursor: pointer; }
+
 .visually-hidden {
   /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
   position: absolute !important;
@@ -58,12 +61,18 @@ header {
     font-weight: bold;
     background: white;
     border: none; }
+    @media only screen and (min-width: 641px) {
+      header button {
+        margin: 20px 10px;
+        width: 200px; } }
   header div {
     height: 300px;
     background: gray;
     color: white;
     margin: 50px 0 0 0;
-    padding: 140px 0 0 0; }
+    padding: 140px 0 0 0;
+    max-width: 600px;
+    margin: 0 auto; }
 
 /*------------------------------------
 	HOME PAGE - FEATURES
@@ -76,7 +85,13 @@ header {
   background: white;
   color: dimgray;
   margin: 50px 0 0 0;
-  padding: 120px 0 0 0; }
+  padding: 120px 20px 20px 20px;
+  max-width: 350px;
+  margin: 0 auto; }
+@media only screen and (min-width: 641px) {
+  .feature-box {
+    display: inline-block;
+    margin: 10px 20px; } }
 
 /*------------------------------------
 	FOOTER

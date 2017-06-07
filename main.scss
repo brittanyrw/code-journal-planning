@@ -15,6 +15,9 @@ body {
 	text-align: center;
 }
 
+button {
+	cursor: pointer;
+}
 .visually-hidden { /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
     position: absolute !important;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -65,6 +68,10 @@ header {
 		font-weight: bold;
 		background: white;
 		border: none;
+		@media only screen and (min-width: 641px) {
+	        margin: 20px 10px;
+	        width: 200px;
+    	} 
 	}
 	div {
 		height: 300px;
@@ -72,6 +79,8 @@ header {
 		color: white;
 		margin: 50px 0 0 0;
 		padding: 140px 0 0 0;
+		max-width: 600px;
+		margin: 0 auto;
 	}
 }
 
@@ -89,8 +98,14 @@ header {
 		background: white;
 		color: dimgray;
 		margin: 50px 0 0 0;
-		padding: 120px 0 0 0;
+		padding: 120px 20px 20px 20px;
+		max-width: 350px;
+		margin: 0 auto;
 	}
+	@media only screen and (min-width: 641px) {
+        display: inline-block;
+        margin: 10px 20px;
+    } 		
 }
 
 /*------------------------------------
