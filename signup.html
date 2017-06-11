@@ -8,23 +8,24 @@
         <link rel="stylesheet" href="main.css"> 
     </head>
     <body>
-        <nav>
-            <p><a href="index.html">Code Journal</a></p>
-            <p>Menu</p>
+        <nav class="main-navigation">
+            <a href="login.html">Login</a>
+            <a href="index.html"><img src="logo.svg" alt="Code Journal text logo"></a>
         </nav>
         <header>
             <h1>Sign Up</h1>
             <p>Text here about why you should sign up.</p>
         </header>
         <section class="signup-buttons">
-            <div class="github-signup-box">
-                <div>Github ICON</div>
-                <button>SIGN UP WITH GITHUB</button>
+            <div class="github-form-box">
+                <span class="visually-hidden">Github Icon</span><i class="fa fa-github-alt fa-2x github-form-icon" aria-hidden="true"></i>
+                <button class="github-button">SIGN UP WITH GITHUB</button>
             </div>
-            <div class="twitter-signup-box">
-                <div>Twitter ICON</div>
-                <button>SIGN UP WITH Twitter</button>
-            </div>            
+            <div class="twitter-form-box">
+                <span class="visually-hidden">Twitter Icon</span><i class="fa fa-twitter fa-2x twitter-form-icon" aria-hidden="true"></i>
+                <button class="twitter-button">SIGN UP WITH TWITTER</button>
+            </div>     
+            <p>or create an account</p>       
         </section>
         <section class="signup-form">
             <form>
@@ -37,10 +38,10 @@
                 <label class="visually-hidden">Password</label>
                 <input type="text" placeholder="PASSWORD" required>
                 
-                <button type="submit">Sign Up</button>
+                <button type="submit" class="signup-button">SIGN UP</button>
             </form>
 
-            <p>Already have an account? Login</p>
+            <p>Already have an account? <a href="login.html">Login</a></p>
         </section>
         <footer>
             <p>FAQ</p>
