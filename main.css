@@ -8,12 +8,42 @@ body {
   font-weight: normal;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  color: dimgray;
-  background: lightgray;
-  text-align: center; }
+  color: #F0F1EE;
+  background: #1352A2;
+  text-align: center;
+  position: relative;
+  height: 100%; }
 
 button {
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  margin: 10px 0;
+  border: none;
+  font-size: 20px;
+  font-weight: 400;
+  border: 2px solid #1352A2; }
+  @media only screen and (min-width: 641px) {
+    button {
+      margin: 20px 10px;
+      width: 200px; } }
+
+a {
+  text-decoration: none;
+  color: #F0F1EE; }
+  a:hover {
+    color: #FFD464; }
+
+.fa {
   cursor: pointer; }
+
+.signup-button, .login-button {
+  background: #FFD464;
+  color: #1352A2;
+  outline: 2px solid #FFD464;
+  font-size: 20px;
+  font-weight: 400;
+  border: 2px solid #1352A2; }
 
 .visually-hidden {
   /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
@@ -30,22 +60,20 @@ button {
 body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .visually-hidden button {
   display: none !important; }
 
-a {
-  text-decoration: none;
-  color: dimgray; }
-
 /*------------------------------------
 	HOME PAGE - NAVIGATION
 ------------------------------------*/
-nav {
+.main-navigation {
   padding: 20px;
-  height: 80px;
-  background: lightgray; }
-  nav p:nth-child(1) {
-    float: left;
-    font-weight: bold; }
-  nav p:nth-child(2) {
-    float: right; }
+  height: 80px; }
+  .main-navigation img {
+    height: 25px; }
+  .main-navigation a:nth-child(1) {
+    float: right;
+    font-size: 20px;
+    padding: 3px 0 0 0; }
+  .main-navigation a:nth-child(2) {
+    float: left; }
 
 /*------------------------------------
 	HOME PAGE - HEADER
@@ -54,40 +82,39 @@ header {
   padding: 20px; }
   header h1 {
     font-weight: 300; }
-  header button {
-    width: 250px;
-    height: 50px;
-    margin: 10px 0;
-    font-weight: bold;
-    background: white;
-    border: none; }
-    @media only screen and (min-width: 641px) {
-      header button {
-        margin: 20px 10px;
-        width: 200px; } }
   header div {
     height: 300px;
     background: gray;
     color: white;
-    margin: 50px 0 0 0;
     padding: 140px 0 0 0;
     max-width: 600px;
-    margin: 0 auto; }
+    margin: 20px auto 10px auto; }
+
+.demo-button {
+  background: #F97572;
+  color: #F0F1EE;
+  outline: 2px solid #F97572; }
+
+.feature-button {
+  background: #F0F1EE;
+  color: #1352A2;
+  outline: 2px solid #F0F1EE; }
 
 /*------------------------------------
 	HOME PAGE - FEATURES
 ------------------------------------*/
 .features-section {
   padding: 20px; }
+  .features-section h1 {
+    margin-top: 0; }
 
 .feature-box div {
   height: 250px;
   background: white;
   color: dimgray;
-  margin: 50px 0 0 0;
   padding: 120px 20px 20px 20px;
   max-width: 350px;
-  margin: 0 auto; }
+  margin: 20px auto; }
 @media only screen and (min-width: 641px) {
   .feature-box {
     display: inline-block;
@@ -98,10 +125,13 @@ header {
 ------------------------------------*/
 footer {
   color: white;
-  background: dimgray;
+  background: #333332;
   padding: 20px;
   height: 80px;
-  width: 100%; }
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 80px 0 -80px 0; }
   footer .fa {
     color: white;
     padding: 0 5px; }
@@ -110,5 +140,179 @@ footer {
     margin-top: 10px; }
   footer .social-media-icons {
     float: right; }
+
+/*------------------------------------
+	SIGN UP & LOGIN PAGES
+------------------------------------*/
+.signup-buttons i, .login-buttons i {
+  background: white;
+  color: #F0F1EE;
+  padding: 9px;
+  border-radius: 5px 0 0 5px;
+  vertical-align: top; }
+.signup-buttons button, .login-buttons button {
+  width: 250px;
+  border-radius: 0 5px 5px 0;
+  margin: 0 0 20px 0;
+  vertical-align: top;
+  border: none;
+  color: #F0F1EE;
+  font-weight: 300; }
+.signup-buttons .twitter-button, .signup-buttons .twitter-form-icon, .login-buttons .twitter-button, .login-buttons .twitter-form-icon {
+  background: #4990E2; }
+.signup-buttons .github-button, .signup-buttons .github-form-icon, .login-buttons .github-button, .login-buttons .github-form-icon {
+  background: #333332; }
+
+.signup-form input, .login-form input {
+  width: 300px;
+  padding: 15px;
+  margin: 0 0 20px 0;
+  border: none;
+  color: #333332; }
+.signup-form button, .login-form button {
+  width: 300px; }
+
+/*------------------------------------
+	DASHBOARD
+------------------------------------*/
+.dashboard-body {
+  background: #F0F1EE;
+  color: #333332;
+  text-align: left; }
+  @media only screen and (min-width: 641px) {
+    .dashboard-body {
+      transition: margin-left .5s;
+      margin-left: 100px; }
+      .dashboard-body .activity-graph, .dashboard-body .activity-statistics {
+        display: inline-block;
+        width: 48%;
+        max-width: 500px;
+        margin: 20px 5px;
+        vertical-align: top; } }
+  .dashboard-body footer {
+    background: #1352A2; }
+
+.dashboard-navigation {
+  padding: 20px;
+  height: 80px;
+  background: #F97572;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  text-align: center; }
+  .dashboard-navigation img {
+    height: 25px; }
+  .dashboard-navigation .fa-bars {
+    float: left;
+    color: #F0F1EE; }
+  .dashboard-navigation .fa-bell {
+    float: right;
+    font-size: 1.5em;
+    color: #F0F1EE; }
+  .dashboard-navigation img {
+    margin: 0 auto; }
+  @media only screen and (min-width: 641px) {
+    .dashboard-navigation .hamburger-navigation-menu {
+      display: none; } }
+
+.dashboard {
+  padding: 20px; }
+  .dashboard a {
+    color: #333332; }
+    .dashboard a:hover {
+      color: #FFD464; }
+
+.dashboard-statistics {
+  min-height: 150px; }
+
+.activity-statistics, .activity-graph {
+  height: 150px; }
+
+.activity-statistics, .activity-graph, .square {
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  margin: 20px 0; }
+
+.square {
+  height: 365px;
+  width: 365px;
+  display: inline-block; }
+  .square .square-title {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #b3b3b1;
+    margin: 0; }
+  .square .square-progress-bar {
+    height: 25px;
+    border-radius: 5px;
+    background: #F0F1EE;
+    clear: both; }
+  .square .view-all-link {
+    float: right;
+    padding: 20px 0; }
+  @media only screen and (min-width: 641px) {
+    .square {
+      margin: 20px; } }
+
+.project-square {
+  border-top: 5px solid #F97572; }
+
+.project-square-item .square-text {
+  float: left; }
+.project-square-item .square-detailed-text {
+  float: right; }
+
+.tutorial-square {
+  border-top: 5px solid #1352A2; }
+
+.course-square {
+  border-top: 5px solid #FFD464; }
+
+/*------------------------------------
+	DASHBOARD NAVIGATION
+------------------------------------*/
+/* The side navigation menu */
+#side-navigation {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333332;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.5s;
+  text-align: left; }
+  #side-navigation i {
+    width: 35px; }
+  #side-navigation .fa {
+    color: #F0F1EE;
+    padding: 0 10px 0 0; }
+  #side-navigation li {
+    list-style: none;
+    font-size: 20px;
+    color: #818181;
+    transition: 0.3s;
+    padding: 15px 0; }
+  @media only screen and (min-width: 641px) {
+    #side-navigation {
+      width: 100px;
+      text-align: center; }
+      #side-navigation ul {
+        padding: 0 10px; }
+      #side-navigation .fa {
+        padding: 0;
+        font-size: 25px; }
+      #side-navigation a {
+        display: inline-block;
+        font-size: 16px; }
+      #side-navigation .close-button {
+        display: none; } }
+
+#side-navigation .close-button {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px; }
 
 /*# sourceMappingURL=main.css.map */

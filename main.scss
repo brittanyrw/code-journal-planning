@@ -2,6 +2,14 @@
 	GENERAL
 ------------------------------------*/
 
+$blue: #1352A2;
+$twitter: #4990E2;
+$pink: #F97572;
+$black: #333332;
+$gray: lighten($black, 50%);
+$offwhite: #F0F1EE;
+$yellow: #FFD464;
+
 * {
     box-sizing: border-box;
 }
@@ -10,14 +18,49 @@ body {
 	font-weight: normal;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
-	color: dimgray;
-	background: lightgray;
+	color: $offwhite;
+	background: $blue;
 	text-align: center;
+	position: relative;
+	height: 100%;
 }
 
 button {
+	width: 250px;
+	height: 50px;
+	cursor: pointer;
+	margin: 10px 0;
+	border: none;
+	font-size: 20px;
+	font-weight: 400;
+	border: 2px solid $blue;
+		@media only screen and (min-width: 641px) {
+	        margin: 20px 10px;
+	        width: 200px;
+    	} 	
+}
+
+a {
+	text-decoration: none;
+	color: $offwhite;
+		&:hover {
+			color: $yellow;
+		}
+}
+
+.fa {
 	cursor: pointer;
 }
+
+.signup-button, .login-button {
+	background: $yellow;
+	color: $blue;
+	outline: 2px solid $yellow;
+	font-size: 20px;
+	font-weight: 400;
+	border: 2px solid $blue;
+}
+
 .visually-hidden { /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
     position: absolute !important;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -30,25 +73,23 @@ button {
 } 
 body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .visually-hidden button { display: none !important; }
 
-a {
-	text-decoration: none;
-	color: dimgray;
-}
-
 /*------------------------------------
 	HOME PAGE - NAVIGATION
 ------------------------------------*/
 
-nav {
+.main-navigation {
 	padding: 20px;
 	height: 80px;
-	background: lightgray;
-	p:nth-child(1) {
-		float: left;
-		font-weight: bold;
+	img {
+		height: 25px;
 	}
-	p:nth-child(2) {
+	a:nth-child(1) {
 		float: right;
+		font-size: 20px;
+		padding: 3px 0 0 0;
+	}
+	a:nth-child(2) {
+		float: left;
 	}
 }
 
@@ -61,27 +102,26 @@ header {
 	h1 {
 		font-weight: 300;
 	}
-	button {
-		width: 250px;
-		height: 50px;
-		margin: 10px 0;
-		font-weight: bold;
-		background: white;
-		border: none;
-		@media only screen and (min-width: 641px) {
-	        margin: 20px 10px;
-	        width: 200px;
-    	} 
-	}
 	div {
 		height: 300px;
 		background: gray;
 		color: white;
-		margin: 50px 0 0 0;
 		padding: 140px 0 0 0;
 		max-width: 600px;
-		margin: 0 auto;
+		margin: 20px auto 10px auto;
 	}
+}
+
+.demo-button {
+	background: $pink;
+	color: $offwhite;
+	outline: 2px solid $pink;
+}
+
+.feature-button {
+	background: $offwhite;
+	color: $blue;
+	outline: 2px solid $offwhite;
 }
 
 /*------------------------------------
@@ -90,6 +130,9 @@ header {
 
 .features-section {
 	padding: 20px;
+	h1 {
+		margin-top: 0;
+	}
 }
 
 .feature-box {
@@ -97,10 +140,9 @@ header {
 		height: 250px;
 		background: white;
 		color: dimgray;
-		margin: 50px 0 0 0;
 		padding: 120px 20px 20px 20px;
 		max-width: 350px;
-		margin: 0 auto;
+		margin: 20px auto;
 	}
 	@media only screen and (min-width: 641px) {
         display: inline-block;
@@ -114,10 +156,13 @@ header {
 
 footer {
 	color: white;
-	background: dimgray;
+	background: $black;
 	padding: 20px;
 	height: 80px;
 	width: 100%;
+	position: absolute;
+	bottom: 0;
+	margin: 80px 0 -80px 0;
 		.fa {
 			color: white;
 			padding: 0 5px;
@@ -129,4 +174,231 @@ footer {
 		.social-media-icons {
 			float: right;
 		}
+}
+
+
+/*------------------------------------
+	SIGN UP & LOGIN PAGES
+------------------------------------*/
+
+.signup-buttons, .login-buttons {
+	i {
+		background: white;
+		color: $offwhite;
+		padding: 9px;
+		border-radius: 5px 0 0 5px;
+		vertical-align: top;
+	}
+	button {
+		width: 250px;
+		border-radius: 0 5px 5px 0;
+		margin: 0 0 20px 0;
+		vertical-align: top;
+		border: none;
+		color: $offwhite;
+		font-weight: 300;
+	}
+	.twitter-button, .twitter-form-icon{
+		background: $twitter;
+	}
+	.github-button, .github-form-icon {
+		background: $black;
+	}
+}
+
+.signup-form, .login-form {
+	input {
+		width: 300px;
+		padding: 15px;
+		margin: 0 0 20px 0;
+		border: none;
+		color: $black;
+	}
+	button {
+		width: 300px;
+	}
+}
+
+
+/*------------------------------------
+	DASHBOARD
+------------------------------------*/
+
+.dashboard-body {
+	background: $offwhite;
+	color: $black;
+	text-align: left;
+	@media only screen and (min-width: 641px) {
+		transition: margin-left .5s;
+		margin-left: 100px;
+		.activity-graph, .activity-statistics {
+			display: inline-block;
+			width: 48%;	
+			max-width: 500px;
+			margin: 20px 5px;
+			vertical-align: top;
+		}
+	}
+	footer {
+		background: $blue;
+	}
+}
+
+.dashboard-navigation {
+	padding: 20px;
+	height: 80px;
+	background: $pink;
+	box-shadow: 0 3px 6px rgba(0,0,0,.16);
+	text-align: center;
+	img {
+		height: 25px;
+	}
+	.fa-bars {
+		float: left;
+		color: $offwhite;
+	}
+	.fa-bell {
+		float: right;
+		font-size: 1.5em;
+		color: $offwhite;
+	}
+	img {
+		margin: 0 auto;
+	}
+	@media only screen and (min-width: 641px) {
+		.hamburger-navigation-menu {
+			display: none;
+		}
+	}
+}
+
+.dashboard {
+	padding: 20px;
+	a {
+		color: $black;
+		&:hover {
+			color: $yellow;
+		}
+	}
+}
+
+.dashboard-statistics {
+	min-height: 150px;
+}
+
+.activity-statistics, .activity-graph {
+	height: 150px;
+}
+
+.activity-statistics, .activity-graph, .square {
+	background: white;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: 0 3px 6px rgba(0,0,0,.16);
+	margin: 20px 0;
+}
+
+.square {
+	height: 365px;
+	width: 365px;
+	display: inline-block;
+	.square-title {
+		padding: 0 0 20px 0;
+		border-bottom: 1px solid $gray;
+		margin: 0;
+	}
+	.square-progress-bar {
+		height: 25px;
+		border-radius: 5px;
+		background: $offwhite;
+		clear: both;
+	}
+	.view-all-link {
+		float: right;
+		padding: 20px 0;
+	}
+	@media only screen and (min-width: 641px) {
+		margin: 20px;
+	}
+}
+
+.project-square {
+	border-top: 5px solid $pink;
+}
+
+.project-square-item {
+	.square-text {
+		float: left;
+	}
+	.square-detailed-text {
+		float: right;
+	}
+}
+
+.tutorial-square {
+	border-top: 5px solid $blue;	
+}
+
+.course-square {
+	border-top: 5px solid $yellow;	
+}
+
+/*------------------------------------
+	DASHBOARD NAVIGATION
+------------------------------------*/
+
+
+/* The side navigation menu */
+#side-navigation {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: $black;
+    overflow-x: hidden; 
+    padding-top: 20px; 
+    transition: 0.5s; 
+    text-align: left;
+    i {
+    	width: 35px;
+    }
+    .fa {
+    	color: $offwhite;
+    	padding: 0 10px 0 0;
+    }
+    li {
+	    list-style: none;
+	    font-size: 20px;
+	    color: #818181;
+	    transition: 0.3s;
+	    padding: 15px 0;   	
+    }
+    @media only screen and (min-width: 641px) {
+    	width: 100px;
+    	text-align: center;
+    	ul {
+    		padding: 0 10px;
+    	}
+    	.fa {
+    		padding: 0;
+    		font-size: 25px;
+    	}
+    	a {
+    		display: inline-block;
+    		font-size: 16px;
+    	}
+    	.close-button {
+    		display: none;
+    	}
+    }
+}
+
+
+#side-navigation .close-button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
 }
