@@ -185,10 +185,8 @@ footer {
       margin-left: 100px; }
       .dashboard-body .activity-graph, .dashboard-body .activity-statistics {
         display: inline-block;
-        width: 48%;
-        max-width: 500px;
-        margin: 20px 5px;
-        vertical-align: top; } }
+        width: 500px;
+        margin: 10px 3px; } }
   .dashboard-body footer {
     background: #1352A2; }
 
@@ -214,6 +212,7 @@ footer {
       display: none; } }
 
 .dashboard {
+  text-align: center;
   padding: 20px; }
   .dashboard a {
     color: #333332; }
@@ -223,20 +222,27 @@ footer {
 .dashboard-statistics {
   min-height: 150px; }
 
-.activity-statistics, .activity-graph {
-  height: 150px; }
-
-.activity-statistics, .activity-graph, .square {
+.activity-graph, .square {
   background: white;
   border-radius: 5px;
-  padding: 20px;
+  padding: 14px 20px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   margin: 20px 0; }
 
+.activity-graph {
+  height: 150px; }
+
+.activity-statistics {
+  height: 100px; }
+
 .square {
   height: 365px;
-  width: 365px;
-  display: inline-block; }
+  width: 30%;
+  min-width: 320px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 20px 1.5%; }
   .square .square-title {
     padding: 0 0 20px 0;
     border-bottom: 1px solid #b3b3b1;
@@ -246,32 +252,106 @@ footer {
     border-radius: 5px;
     background: #F0F1EE;
     clear: both; }
+  .square .square-labels {
+    clear: both; }
   .square .view-all-link {
     float: right;
     padding: 20px 0; }
-  @media only screen and (min-width: 641px) {
-    .square {
-      margin: 20px; } }
 
 .project-square {
   border-top: 5px solid #F97572; }
 
-.project-square-item .square-text {
-  float: left; }
-.project-square-item .square-detailed-text {
-  float: right; }
-
 .tutorial-square {
   border-top: 5px solid #1352A2; }
 
+.square-labels ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  clear: both; }
+  .square-labels ul li {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    padding: 5px;
+    border-radius: 2px;
+    color: #F0F1EE;
+    font-size: 12px; }
+
+.sass-label, .algorithms-label {
+  background: #333332; }
+
+.react-label {
+  background: #1352A2; }
+
+.difficulty-beginner-label {
+  background: #704996; }
+
+.organization-label {
+  background: #5AAD5C; }
+
+.square-status-icon {
+  padding: 18px 0 0 0;
+  color: #333332; }
+
 .course-square {
   border-top: 5px solid #FFD464; }
+
+.resource-square {
+  border-top: 5px solid #5AAD5C; }
+
+.event-square {
+  border-top: 5px solid #704996; }
+  .event-square .square-text {
+    float: left; }
+  .event-square .square-date {
+    float: right; }
+
+.subject-square {
+  border-top: 5px solid #333332; }
+
+.resource-square i, .subject-square i {
+  float: left; }
+
+.project-square-item .square-text, .tutorial-square-item .square-text, .course-square-item .square-text {
+  float: left; }
+.project-square-item .square-detailed-text, .project-square-item .square-status-icon, .tutorial-square-item .square-detailed-text, .tutorial-square-item .square-status-icon, .course-square-item .square-detailed-text, .course-square-item .square-status-icon {
+  float: right; }
+
+/*------------------------------------
+	DASHBOARD STATISTICS
+------------------------------------*/
+.blog-stats, .twitter-stats, .github-stats, .project-stats {
+  width: 100%;
+  border-radius: 2px;
+  display: inline-block;
+  color: #F0F1EE;
+  padding: 5px;
+  margin: 1px;
+  vertical-align: top; }
+  @media only screen and (min-width: 641px) {
+    .blog-stats, .twitter-stats, .github-stats, .project-stats {
+      width: 23%;
+      height: 100%;
+      padding: 20px; } }
+
+.github-stats {
+  background: #333332; }
+
+.twitter-stats {
+  background: #4990E2; }
+
+.blog-stats {
+  background: #704996; }
+
+.project-stats {
+  background: #5AAD5C; }
 
 /*------------------------------------
 	DASHBOARD NAVIGATION
 ------------------------------------*/
 /* The side navigation menu */
-#side-navigation {
+.side-navigation {
   height: 100%;
   width: 0;
   position: fixed;
@@ -280,39 +360,59 @@ footer {
   left: 0;
   background-color: #333332;
   overflow-x: hidden;
-  padding-top: 20px;
-  transition: 0.5s;
+  padding-top: 80px;
+  transition: 1s;
   text-align: left; }
-  #side-navigation i {
+  .side-navigation i {
     width: 35px; }
-  #side-navigation .fa {
+  .side-navigation .fa {
     color: #F0F1EE;
     padding: 0 10px 0 0; }
-  #side-navigation li {
+  .side-navigation li {
     list-style: none;
     font-size: 20px;
     color: #818181;
     transition: 0.3s;
     padding: 15px 0; }
+  .side-navigation .dashboard-side-link {
+    background: #F0F1EE;
+    color: #333332;
+    border-radius: 2px 0 0 2px;
+    position: absolute; }
+    .side-navigation .dashboard-side-link i, .side-navigation .dashboard-side-link a {
+      color: #333332; }
   @media only screen and (min-width: 641px) {
-    #side-navigation {
+    .side-navigation {
       width: 100px;
+      left: 0;
       text-align: center; }
-      #side-navigation ul {
+      .side-navigation li:first-child {
+        padding: 0; }
+      .side-navigation ul {
         padding: 0 10px; }
-      #side-navigation .fa {
+      .side-navigation .fa {
         padding: 0;
         font-size: 25px; }
-      #side-navigation a {
+      .side-navigation a {
         display: inline-block;
         font-size: 16px; }
-      #side-navigation .close-button {
+      .side-navigation .close-button {
         display: none; } }
 
-#side-navigation .close-button {
+.open-side-navigation {
+  width: 100%;
+  transition: 1s; }
+
+.side-navigation .close-button {
   position: absolute;
   top: 20px;
   right: 25px;
   font-size: 36px; }
+
+/*------------------------------------
+	PROJECTS PAGE - DASHBOARD
+------------------------------------*/
+.indv-project-square {
+  border-top: 5px solid #F97572; }
 
 /*# sourceMappingURL=main.css.map */

@@ -9,6 +9,8 @@ $black: #333332;
 $gray: lighten($black, 50%);
 $offwhite: #F0F1EE;
 $yellow: #FFD464;
+$green: #5AAD5C;
+$purple: #704996;
 
 * {
     box-sizing: border-box;
@@ -233,10 +235,8 @@ footer {
 		margin-left: 100px;
 		.activity-graph, .activity-statistics {
 			display: inline-block;
-			width: 48%;	
-			max-width: 500px;
-			margin: 20px 5px;
-			vertical-align: top;
+			width: 500px;	
+			margin: 10px 3px;
 		}
 	}
 	footer {
@@ -273,6 +273,7 @@ footer {
 }
 
 .dashboard {
+	text-align: center;
 	padding: 20px;
 	a {
 		color: $black;
@@ -286,22 +287,32 @@ footer {
 	min-height: 150px;
 }
 
-.activity-statistics, .activity-graph {
-	height: 150px;
-}
-
-.activity-statistics, .activity-graph, .square {
+.activity-graph, .square {
 	background: white;
 	border-radius: 5px;
-	padding: 20px;
+	padding: 14px 20px;
 	box-shadow: 0 3px 6px rgba(0,0,0,.16);
 	margin: 20px 0;
 }
 
+
+.activity-graph {
+	height: 150px;	
+}
+
+.activity-statistics {
+	height: 100px;
+}
+
+
 .square {
 	height: 365px;
-	width: 365px;
+	width: 30%;
+	min-width: 320px;
 	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	margin: 20px 1.5%;
 	.square-title {
 		padding: 0 0 20px 0;
 		border-bottom: 1px solid $gray;
@@ -313,34 +324,127 @@ footer {
 		background: $offwhite;
 		clear: both;
 	}
+	.square-labels {
+		clear: both;
+	}
 	.view-all-link {
 		float: right;
 		padding: 20px 0;
 	}
-	@media only screen and (min-width: 641px) {
-		margin: 20px;
-	}
+	
 }
 
 .project-square {
 	border-top: 5px solid $pink;
 }
 
-.project-square-item {
-	.square-text {
-		float: left;
-	}
-	.square-detailed-text {
-		float: right;
-	}
-}
-
 .tutorial-square {
 	border-top: 5px solid $blue;	
 }
 
+.square-labels ul {
+	list-style: none;
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	clear: both;
+	li {
+		display: inline-block;
+		margin: 0 5px 0 0;
+		padding: 5px;
+		border-radius: 2px;
+		color: $offwhite;
+		font-size: 12px;
+	}
+}
+.sass-label, .algorithms-label {
+	background: $black;
+}
+.react-label {
+	background: $blue;
+}
+.difficulty-beginner-label {
+	background: $purple;
+}
+.organization-label {
+	background: $green;
+}
+.square-status-icon {
+	padding: 18px 0 0 0;
+	color: $black;
+}
+
 .course-square {
 	border-top: 5px solid $yellow;	
+}
+
+.resource-square {
+	border-top: 5px solid $green;	
+}
+
+.event-square {
+	border-top: 5px solid $purple;	
+	.square-text {
+		float: left;
+	}
+	.square-date {
+		float: right;
+	}
+}
+
+.subject-square {
+	border-top: 5px solid $black;	
+}
+
+.resource-square, .subject-square {
+	i {
+		float: left;
+	}
+}
+
+.project-square-item, .tutorial-square-item, .course-square-item {
+	.square-text {
+		float: left;
+	}
+	.square-detailed-text, .square-status-icon {
+		float: right;
+	}
+}
+
+/*------------------------------------
+	DASHBOARD STATISTICS
+------------------------------------*/
+
+.blog-stats, .twitter-stats, .github-stats, .project-stats {
+	// height: 100%;
+	width: 100%;
+	border-radius: 2px;
+	display: inline-block;
+	color: $offwhite;
+	padding: 5px;
+	margin: 1px;
+	vertical-align: top;
+	@media only screen and (min-width: 641px) {
+		width: 23%;
+		height: 100%;
+		padding: 20px;
+	}
+}
+
+.github-stats {
+	background: $black;
+}
+
+.twitter-stats {
+	background: $twitter;
+}
+
+.blog-stats {
+	background: $purple;
+}
+
+.project-stats {
+	background: $green;
 }
 
 /*------------------------------------
@@ -349,7 +453,7 @@ footer {
 
 
 /* The side navigation menu */
-#side-navigation {
+.side-navigation {
     height: 100%; 
     width: 0; 
     position: fixed; 
@@ -358,8 +462,8 @@ footer {
     left: 0;
     background-color: $black;
     overflow-x: hidden; 
-    padding-top: 20px; 
-    transition: 0.5s; 
+    padding-top: 80px; 
+    transition: 1s; 
     text-align: left;
     i {
     	width: 35px;
@@ -367,17 +471,30 @@ footer {
     .fa {
     	color: $offwhite;
     	padding: 0 10px 0 0;
-    }
+    }  	
     li {
 	    list-style: none;
 	    font-size: 20px;
 	    color: #818181;
 	    transition: 0.3s;
-	    padding: 15px 0;   	
+	    padding: 15px 0; 
+    }
+    .dashboard-side-link {
+    	background: $offwhite;
+    	color: $black;
+    	border-radius: 2px 0 0 2px;
+    	position: absolute;
+    	i, a {
+    		color: $black;
+    	}
     }
     @media only screen and (min-width: 641px) {
     	width: 100px;
+    	left: 0;
     	text-align: center;
+    	    li:first-child {
+    			padding: 0;
+    		}
     	ul {
     		padding: 0 10px;
     	}
@@ -395,10 +512,34 @@ footer {
     }
 }
 
+.open-side-navigation {
+	width: 100%;
+	transition: 1s;
+}
 
-#side-navigation .close-button {
+
+.side-navigation .close-button {
     position: absolute;
     top: 20px;
     right: 25px;
     font-size: 36px;
 }
+
+/*------------------------------------
+	PROJECTS PAGE - DASHBOARD
+------------------------------------*/
+
+.indv-project-square {
+	border-top: 5px solid $pink;
+}
+
+// .square {
+// 	height: 565px;
+// 	width: 30%;
+// 	min-width: 320px;
+// 	display: inline-block;
+// 	text-align: center;
+// 	vertical-align: top;
+// 	margin: 20px 1.5%;
+// 	background: white;
+// }
