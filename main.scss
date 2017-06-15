@@ -50,6 +50,12 @@ a {
 		}
 }
 
+h3 {
+	margin: 10px 0;
+	font-weight: 500;
+	font-size: 16px;
+}
+
 .fa {
 	cursor: pointer;
 }
@@ -180,10 +186,10 @@ footer {
 
 
 /*------------------------------------
-	SIGN UP & LOGIN PAGES
+	SIGN UP, LOGIN and SETTINGS PAGES
 ------------------------------------*/
 
-.signup-buttons, .login-buttons {
+.signup-buttons, .login-buttons, .settings-buttons {
 	i {
 		background: white;
 		color: $offwhite;
@@ -287,7 +293,18 @@ footer {
 	min-height: 150px;
 }
 
-.activity-graph, .square {
+.calendar {
+	min-height: 150px;
+	max-width: 90%;
+	background: white;
+	border-radius: 5px;
+	padding: 14px 20px;
+	box-shadow: 0 3px 6px rgba(0,0,0,.16);
+	margin: 20px auto;
+
+}
+
+.activity-graph, .square, .indv-square {
 	background: white;
 	border-radius: 5px;
 	padding: 14px 20px;
@@ -302,6 +319,10 @@ footer {
 
 .activity-statistics {
 	height: 100px;
+	vertical-align: top;
+	@media only screen and (min-width: 641px) {
+		// margin: 50px 0;
+	}
 }
 
 
@@ -331,7 +352,6 @@ footer {
 		float: right;
 		padding: 20px 0;
 	}
-	
 }
 
 .project-square {
@@ -380,6 +400,12 @@ footer {
 
 .resource-square {
 	border-top: 5px solid $green;	
+	.resource-square-item {
+		text-align: left;
+		h3 {
+			text-align: left;
+		}
+	}
 }
 
 .event-square {
@@ -399,14 +425,27 @@ footer {
 .resource-square, .subject-square {
 	i {
 		float: left;
+		margin: 8px 10px 8px 0;
+	}
+	.filter-text {
+		text-align: left;
 	}
 }
 
-.project-square-item, .tutorial-square-item, .course-square-item {
+.resource-square-item, .subject-square-item {
+	a {
+		display: block;
+		margin: 8px 0;
+		text-align: left;
+	}
+}
+
+.project-square-item, .tutorial-square-item, .course-square-item, .indv-project-square {
+	clear: both;
 	.square-text {
 		float: left;
 	}
-	.square-detailed-text, .square-status-icon {
+	.square-detailed-text, .square-status-icon, .indv-project-square {
 		float: right;
 	}
 }
@@ -526,20 +565,190 @@ footer {
 }
 
 /*------------------------------------
-	PROJECTS PAGE - DASHBOARD
+	 DASHBOARD PAGES
 ------------------------------------*/
 
 .indv-project-square {
 	border-top: 5px solid $pink;
 }
 
-// .square {
-// 	height: 565px;
-// 	width: 30%;
-// 	min-width: 320px;
-// 	display: inline-block;
-// 	text-align: center;
-// 	vertical-align: top;
-// 	margin: 20px 1.5%;
-// 	background: white;
-// }
+.indv-subject-square {
+	border-top: 5px solid $black;
+}
+
+.indv-tutorial-square {
+	border-top: 5px solid $blue;
+}
+
+.indv-course-square {
+	border-top: 5px solid $yellow;
+}
+
+.indv-event-square {
+	border-top: 5px solid $purple;
+}
+
+.indv-resource-square {
+	border-top: 5px solid $green;
+}
+
+.indv-square {
+	width: 40%;
+	// min-width: 320px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	margin: 20px 1.5%;
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		li {
+			margin: 10px 0;
+		}
+	}
+	.square-title {
+		padding: 0 0 20px 0;
+		border-bottom: 1px solid $gray;
+		margin: 0;
+	}
+	.square-progress-bar {
+		height: 25px;
+		border-radius: 5px;
+		background: $offwhite;
+		clear: both;
+		margin: 0 0 20px 0;
+	}
+	.square-labels {
+		clear: both;
+	}
+	.view-all-link {
+		float: right;
+		padding: 20px 0;
+	}
+	.square-notes {
+		text-align: left;
+		background: $offwhite;
+		padding: 10px;
+		border-radius: 5px;
+	}
+}
+
+.indv-tutorial-square, .indv-course-square, .indv-event-square {
+	width: 320px;	
+}
+
+.indv-resource-square {
+	width: 260px;
+}
+
+.project-links, .tutorial-links, .course-links, .event-links, .resource-links {
+	text-align: left;
+	a {
+		display: block;
+		margin: 10px 0 0 0;
+	}
+	i {
+		margin: 0 20px 0 0;
+	}
+}
+
+.indv-project-task {
+	clear: both;
+	p {
+		float: left;
+		margin: 10px 0;
+	}
+	i {
+		float: right;
+		margin: 10px 0;
+	}
+}
+
+.project-resource-links, h2 {
+	clear: both;
+	a {
+		display: block;
+		text-align: left;
+		margin: 10px 0;
+	}
+}
+
+.tutorial-status-icon-complete, .course-status-icon-complete {
+	color: $green;
+	float: right;
+}
+
+.filter {
+	background: white;
+	width: 90%;
+	max-width: 300px;
+	margin: 0 auto;
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid $black;
+}
+
+.tutorial-controls, .course-controls, .event-controls {
+	div, p {
+		display: inline-block;
+	}
+	p {
+		padding: 0 20px;
+	}
+}
+
+.course-details {
+	p {
+		display: inline-block;
+	}
+	p:nth-child(1) {
+		float: left;
+	}
+	p:nth-child(2) {
+		float: right;
+	}
+}
+
+.event-time-date, .event-address {
+	display: inline-block;
+}
+
+.event-time-date {
+	text-align:left;
+	float: right;
+}
+
+.event-address {
+	float: left;
+	text-align: left;
+}
+
+.settings-link {
+	margin: 80px 0 0 0;
+}
+
+.indv-resource-square {
+	.square-title {
+		padding: 0 0 10px 0;
+	}
+}
+
+/*------------------------------------
+	 USER SETTINGS
+------------------------------------*/
+
+.settings-title, .settings-caption {
+	text-align: left;
+}
+
+.user-settings, .dashboard-settings {
+	width: 100%;
+	background: white;
+	border-radius: 5px;
+	padding: 14px 20px;
+	box-shadow: 0 3px 6px rgba(0,0,0,.16);
+	margin: 20px 0;
+	text-align: left;
+}
