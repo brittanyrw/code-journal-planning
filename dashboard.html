@@ -17,13 +17,13 @@
             <ul>
                 <li><a href="" class="close-button">&times;</a></li>
                 <li class="dashboard-side-link"><i class="fa fa-home" aria-hidden="true"></i><a href="dashboard.html">Dashboard</a></li>
-                <li><i class="fa fa-cog" aria-hidden="true"></i><a href="dashboard.html">Settings</a></li>
-                <li><i class="fa fa-list" aria-hidden="true"></i><a href="dashboard.html">Subjects</a></li>
-                <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="dashboard.html">Projects</a></li>
-                <li><i class="fa fa-code" aria-hidden="true"></i><a href="dashboard.html">Tutorials</a></li> 
-                <li><i class="fa fa-book" aria-hidden="true"></i><a href="dashboard.html">Courses</a></li>
-                <li><i class="fa fa-calendar" aria-hidden="true"></i><a href="dashboard.html">Events</a></li>
-                <li><i class="fa fa-sticky-note" aria-hidden="true"></i><a href="dashboard.html">Resources</a></li>
+                <li><i class="fa fa-cog settings-link" aria-hidden="true"></i><a href="settings.html">Settings</a></li>
+                <li><i class="fa fa-list" aria-hidden="true"></i><a href="subjects.html">Subjects</a></li>
+                <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="projects.html">Projects</a></li>
+                <li><i class="fa fa-code" aria-hidden="true"></i><a href="tutorials.html">Tutorials</a></li> 
+                <li><i class="fa fa-book" aria-hidden="true"></i><a href="courses.html">Courses</a></li>
+                <li><i class="fa fa-calendar" aria-hidden="true"></i><a href="events.html">Events</a></li>
+                <li><i class="fa fa-sticky-note" aria-hidden="true"></i><a href="resources.html">Resources</a></li>
                 <li><a href="dashboard.html">Log Out</a></li>      
             </ul>                                          
         </nav>
@@ -35,7 +35,9 @@
                     <div class="project-stats">5 Projects</div>
                     <div class="blog-stats">6 Blog Posts</div>                           
                 </div>
-        		<div class="activity-graph">Graph of activity</div>
+        		<div class="activity-graph">
+   
+                </div>
         	</section>
         	<section class="dashboard-squares">
         		
@@ -187,17 +189,29 @@
                 <div class="square resource-square">
                     <h1 class="square-title">Resources</h1>
                     <i class="fa fa-caret-down fa-2x square-filter-icon" aria-hidden="true"></i>
+                    <p class="filter-text">Filter By Type</p>
+                    <h2>Articles</h2>
                     <div class="resource-square-item">
-                        
-                    </div>                                  
-                    <a href="courses.html" class="view-all-link">View all</a>
+                        <a href="#">Article Title Here</a>
+                        <a href="#">Article Title Here</a>
+                        <a href="#">Article Title Here</a>
+                        <a href="#">Article Title Here</a> 
+                        <a href="#">Article Title Here</a> 
+                    </div>                                            
+                    <a href="resources.html" class="view-all-link">View all</a>
                 </div>   
 
                 <div class="square subject-square">
                     <h1 class="square-title">JavaScript</h1>
                     <i class="fa fa-caret-down fa-2x square-filter-icon" aria-hidden="true"></i>
+                    <p class="filter-text">Filter By Type</p>
+                    <h2>Projects</h2>
                     <div class="subject-square-item">
-                        
+                        <a href="#">Project Title Here</a> 
+                        <a href="#">Project Title Here</a> 
+                        <a href="#">Project Title Here</a> 
+                        <a href="#">Project Title Here</a>
+                        <a href="#">Project Title Here</a>                                                                         
                     </div>                                  
                     <a href="subjects.html" class="view-all-link">View all</a>
                 </div> 
@@ -205,18 +219,30 @@
                 <div class="square subject-square">
                     <h1 class="square-title">CSS</h1>
                     <i class="fa fa-caret-down fa-2x square-filter-icon" aria-hidden="true"></i>
+                    <p class="filter-text">Filter By Type</p>
+                    <h2>Tutorials</h2>
                     <div class="subject-square-item">
-                        
-                    </div>                                  
+                        <a href="#">Tutorial Title Here</a> 
+                        <a href="#">Tutorial Title Here</a>                         
+                        <a href="#">Tutorial Title Here</a>                         
+                        <a href="#">Tutorial Title Here</a>
+                        <a href="#">Tutorial Title Here</a>                                                                           
+                    </div>                                 
                     <a href="subjects.html" class="view-all-link">View all</a>
                 </div>
 
                  <div class="square subject-square">
                     <h1 class="square-title">Computer Science</h1>
                     <i class="fa fa-caret-down fa-2x square-filter-icon" aria-hidden="true"></i>
+                    <p class="filter-text">Filter By Type</p>
+                    <h2>Books</h2>
                     <div class="subject-square-item">
-                        
-                    </div>                                  
+                        <a href="#">Book Title Here</a> 
+                        <a href="#">Book Title Here</a>                         
+                        <a href="#">Book Title Here</a>                         
+                        <a href="#">Book Title Here</a>
+                        <a href="#">Book Title Here</a>                                                                           
+                    </div>                                   
                     <a href="subjects.html" class="view-all-link">View all</a>
                 </div>                                                                             
 
@@ -228,6 +254,7 @@
                 <p>Social Media</p>               
             </section>
         </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
         <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
