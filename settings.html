@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js" lang="eng">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <link rel="stylesheet" href="select2.css"> 
+        <link rel="stylesheet" href="main.css"> 
+    </head>
+    <body class="dashboard-body">
+        <nav class="dashboard-navigation">
+            <span class="hamburger-navigation-menu"><i class="fa fa-bars fa-2x" aria-hidden="true" aria-label="Menu" aria-controls="navigation"></i></span>
+            <a href="index.html"><img src="logo.svg" alt="Code Journal text logo"></a>
+            <i class="fa fa-bell fa-2x" aria-hidden="true" aria-label="Alert" aria-controls="navigation"></i>
+        </nav>
+        <nav id="side-navigation" class="side-navigation">
+            <ul>
+                <li><a href="" class="close-button">&times;</a></li>
+                <li class="dashboard-side-link"><i class="fa fa-home" aria-hidden="true"></i><a href="dashboard.html">Dashboard</a></li>
+                <li><i class="fa fa-cog settings-link" aria-hidden="true"></i><a href="settings.html">Settings</a></li>
+                <li><i class="fa fa-list" aria-hidden="true"></i><a href="subjects.html">Subjects</a></li>
+                <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="projects.html">Projects</a></li>
+                <li><i class="fa fa-code" aria-hidden="true"></i><a href="tutorials.html">Tutorials</a></li> 
+                <li><i class="fa fa-book" aria-hidden="true"></i><a href="courses.html">Courses</a></li>
+                <li><i class="fa fa-calendar" aria-hidden="true"></i><a href="events.html">Events</a></li>
+                <li><i class="fa fa-sticky-note" aria-hidden="true"></i><a href="resources.html">Resources</a></li>
+                <li><a href="dashboard.html">Log Out</a></li>      
+            </ul>                                          
+        </nav>
+        <main class="dashboard">
+          <!--   <h1 class="settings-title">Dashboard Settings & User</h1>
+            <p class="settings-caption">Update your dashboard preferences, user profile, and alert settings.</p>
+            <section class="dashboard-settings">   
+                <h2>Dashboard Settings</h2>
+                <div class="edit-squares">
+                    <h3>Update Dashboard Squares</h3>
+                    <p>Remove or Add Default Squares</p>
+                    <div class="user-squares">
+                        <div class="user-square">Projects</div>
+                        <div class="user-square">Courses</div>
+                        <div class="user-square">Tutorials</div>
+                        <div class="user-square">Courses</div>
+                        <div class="user-square">Resources</div>  
+                        <div class="user-square-removed">Events</div>                      
+                    </div>
+                </div>            
+                <label>Add or Remove Subjects</label>
+                <div class="select-wrapper">
+                <select class="subject-select" multiple="multiple" style="width:100%">
+                  <option value="example">JavaScript</option>
+                  <option value="example">Java</option>
+                  <option value="example">C++</option>
+                  <option value="example">Python</option>
+                  <option value="example">C#</option>
+                  <option value="example">PHP</option>
+                  <option value="example">Ruby</option>
+                  <option value="example">Swift</option>  
+                </select>
+                </div>
+
+              
+            </section>     -->
+
+            <section class="user-settings"> 
+                <h2>User Settings</h2>            
+                <form class="user-settings-form">
+                    <div class="password-inputs">
+                    <label><h3>Update Password</h3></label>
+                        <input type="text" placeholder="NEW PASSWORD"></input>
+                        <input type="text" placeholder="CONFIRM PASSWORD"></input>                
+                    </div>
+                    
+                    <div class="email-inputs">
+                    <label><h3>Update Email</h3></label>
+                        <input type="text" placeholder="UPDATED EMAIL"></input>
+                        <input type="text" placeholder="CONFIRM EMAIL"></input>     
+                    </div>
+                    <h3>Notifications</h3>
+                    <ul>
+                        <li> <input type="checkbox">Reminder days after item is added</input></li>
+                        <li><input type="checkbox">Reminder days before an event</input></li>
+                        <li> <input type="checkbox">Alert when content avaliable for selected subjects</input></li>                                                                       
+                    </ul>
+                    <div class="settings-buttons">
+                        <button class="github-button">CONNECT GITHUB</button>
+                        <button class="twitter-button">CONNECT TWITTER</button>
+                        <button class="delete-button">DELETE ACCOUNT</button>
+                    </div>   
+                </form>                               
+            </section>
+
+        </main>
+        <footer>
+            <p>FAQ</p>
+            <section class="social-media-icons">
+                <p>Social Media</p>               
+            </section>
+        </footer>
+        <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+        <script src="select2.full.js" type="text/javascript"></script>
+        <script src="app.js" type="text/javascript"></script>
+    </body>
+</html>
