@@ -149,13 +149,13 @@ footer {
 /*------------------------------------
 	SIGN UP, LOGIN and SETTINGS PAGES
 ------------------------------------*/
-.signup-buttons i, .login-buttons i, .settings-buttons i {
+.signup-buttons i, .login-buttons i, .settings-buttons i, .add-form-button i {
   background: white;
   color: #F0F1EE;
   padding: 9px;
   border-radius: 5px 0 0 5px;
   vertical-align: top; }
-.signup-buttons button, .login-buttons button, .settings-buttons button {
+.signup-buttons button, .login-buttons button, .settings-buttons button, .add-form-button button {
   width: 250px;
   border-radius: 0 5px 5px 0;
   margin: 0 0 20px 0;
@@ -163,19 +163,35 @@ footer {
   border: none;
   color: #F0F1EE;
   font-weight: 300; }
-.signup-buttons .twitter-button, .signup-buttons .twitter-form-icon, .login-buttons .twitter-button, .login-buttons .twitter-form-icon, .settings-buttons .twitter-button, .settings-buttons .twitter-form-icon {
+.signup-buttons .twitter-button, .signup-buttons .twitter-form-icon, .login-buttons .twitter-button, .login-buttons .twitter-form-icon, .settings-buttons .twitter-button, .settings-buttons .twitter-form-icon, .add-form-button .twitter-button, .add-form-button .twitter-form-icon {
   background: #4990E2; }
-.signup-buttons .github-button, .signup-buttons .github-form-icon, .login-buttons .github-button, .login-buttons .github-form-icon, .settings-buttons .github-button, .settings-buttons .github-form-icon {
+  .signup-buttons .twitter-button:hover, .signup-buttons .twitter-form-icon:hover, .login-buttons .twitter-button:hover, .login-buttons .twitter-form-icon:hover, .settings-buttons .twitter-button:hover, .settings-buttons .twitter-form-icon:hover, .add-form-button .twitter-button:hover, .add-form-button .twitter-form-icon:hover {
+    background: #1b5daa; }
+.signup-buttons .github-button, .signup-buttons .github-form-icon, .login-buttons .github-button, .login-buttons .github-form-icon, .settings-buttons .github-button, .settings-buttons .github-form-icon, .add-form-button .github-button, .add-form-button .github-form-icon {
   background: #333332; }
+  .signup-buttons .github-button:hover, .signup-buttons .github-form-icon:hover, .login-buttons .github-button:hover, .login-buttons .github-form-icon:hover, .settings-buttons .github-button:hover, .settings-buttons .github-form-icon:hover, .add-form-button .github-button:hover, .add-form-button .github-form-icon:hover {
+    background: black; }
 
-.signup-form input, .login-form input {
+.signup-form input[type="text"], .login-form input[type="text"], .user-settings-form input[type="text"], .add-item-form input[type="text"], .add-square-form input[type="text"] {
   width: 300px;
   padding: 15px;
   margin: 0 0 20px 0;
   border: none;
   color: #333332; }
-.signup-form button, .login-form button {
+.signup-form button, .login-form button, .user-settings-form button, .add-item-form button, .add-square-form button {
   width: 300px; }
+
+.add-square-form {
+  text-align: left; }
+  .add-square-form input[type=radio] {
+    margin: 0 0 0 10px; }
+  .add-square-form select {
+    height: 48px; }
+  .add-square-form button {
+    border-radius: 5px;
+    background: #F97572;
+    color: white;
+    border: none; }
 
 /*------------------------------------
 	DASHBOARD
@@ -227,6 +243,16 @@ footer {
 .dashboard-statistics {
   min-height: 150px; }
 
+.add-item-left {
+  float: left;
+  display: inline-block;
+  width: 50%; }
+
+.add-item-right {
+  float: right;
+  display: inline-block;
+  width: 50%; }
+
 .calendar {
   min-height: 150px;
   max-width: 90%;
@@ -243,12 +269,14 @@ footer {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   margin: 20px 0; }
 
-.activity-graph {
-  height: 150px; }
-
 .activity-statistics {
   height: 100px;
   vertical-align: top; }
+
+.activity-graph {
+  text-align: center;
+  height: 100px;
+  padding: 0; }
 
 .square {
   height: 365px;
@@ -389,7 +417,7 @@ footer {
   left: 0;
   background-color: #333332;
   overflow-x: hidden;
-  padding-top: 80px;
+  padding-top: 64px;
   transition: 1s;
   text-align: left; }
   .side-navigation i {
@@ -579,5 +607,89 @@ footer {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   margin: 20px 0;
   text-align: left; }
+
+.user-squares {
+  margin: 0 0 20px 0; }
+
+.user-square, .user-square-removed {
+  height: 85px;
+  width: 85px;
+  padding: 30px 0;
+  border-radius: 5px;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  font-size: 15px;
+  cursor: pointer; }
+
+.user-square {
+  color: #333332; }
+  .user-square:nth-child(1) {
+    border: 3px solid #F97572; }
+  .user-square:nth-child(2) {
+    border: 3px solid #1352A2; }
+  .user-square:nth-child(3) {
+    border: 3px solid #FFD464; }
+  .user-square:nth-child(4) {
+    border: 3px solid #5AAD5C; }
+  .user-square:nth-child(5) {
+    border: 3px solid #704996; }
+
+.user-square-removed {
+  background: #b3b3b1;
+  color: #676764;
+  border: 3px solid #80807e; }
+
+.user-settings-form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+.user-settings-form li {
+  padding: 10px 0; }
+.user-settings-form input[type="text"] {
+  border: 1px solid #333332;
+  display: inline-block; }
+.user-settings-form input[type="checkbox"] {
+  margin: 0 20px 0 0; }
+.user-settings-form button {
+  border-radius: 5px;
+  display: block; }
+
+.delete-button {
+  color: #333332; }
+  .delete-button:hover {
+    background: #80807e; }
+
+@media only screen and (min-width: 641px) {
+  .select-wrapper, .edit-squares {
+    width: 50%;
+    display: inline-block; } }
+
+.list-view {
+  margin: 20px 0 0 0; }
+  .list-view .indv-list-item {
+    width: 100%;
+    background: white;
+    border-radius: 5px 0 0 5px;
+    text-align: left;
+    font-size: 18px;
+    position: relative;
+    padding: 0 0 10px 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    margin: 10px 0; }
+  .list-view h1 {
+    font-size: 20px; }
+  .list-view .square-title, .list-view p, .list-view i {
+    display: inline-block; }
+  .list-view .square-author:after {
+    content: ' - '; }
+  .list-view .tutorial-status-icon-complete {
+    float: left;
+    padding: 20px 18px 0 0; }
+  .list-view .indv-tutorial-list-item {
+    border-left: 5px solid #1352A2; }
+  .list-view .tutorial-links {
+    display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */

@@ -60,7 +60,7 @@ h3 {
 	cursor: pointer;
 }
 
-.signup-button, .login-button {
+.signup-button, .login-button{
 	background: $yellow;
 	color: $blue;
 	outline: 2px solid $yellow;
@@ -189,7 +189,7 @@ footer {
 	SIGN UP, LOGIN and SETTINGS PAGES
 ------------------------------------*/
 
-.signup-buttons, .login-buttons, .settings-buttons {
+.signup-buttons, .login-buttons, .settings-buttons, .add-form-button {
 	i {
 		background: white;
 		color: $offwhite;
@@ -208,14 +208,20 @@ footer {
 	}
 	.twitter-button, .twitter-form-icon{
 		background: $twitter;
+		&:hover {
+			background: darken($twitter, 20%);
+		}
 	}
 	.github-button, .github-form-icon {
 		background: $black;
+		&:hover {
+			background: darken($black, 20%);
+		}
 	}
 }
 
-.signup-form, .login-form {
-	input {
+.signup-form, .login-form, .user-settings-form, .add-item-form, .add-square-form {
+	input[type="text"] {
 		width: 300px;
 		padding: 15px;
 		margin: 0 0 20px 0;
@@ -224,6 +230,22 @@ footer {
 	}
 	button {
 		width: 300px;
+	}
+}
+
+.add-square-form {
+	text-align: left;
+	input[type=radio] {
+		margin: 0 0 0 10px;
+	}
+	select {
+		height: 48px;
+	}
+	button {
+		border-radius: 5px;
+		background: $pink;
+		color: white;
+		border: none;
 	}
 }
 
@@ -293,6 +315,18 @@ footer {
 	min-height: 150px;
 }
 
+.add-item-left {
+	float: left;
+	display: inline-block;
+	width: 50%;
+}
+
+.add-item-right {
+	float: right;
+	display: inline-block;
+	width: 50%;
+}
+
 .calendar {
 	min-height: 150px;
 	max-width: 90%;
@@ -312,19 +346,16 @@ footer {
 	margin: 20px 0;
 }
 
-
-.activity-graph {
-	height: 150px;	
-}
-
 .activity-statistics {
 	height: 100px;
 	vertical-align: top;
-	@media only screen and (min-width: 641px) {
-		// margin: 50px 0;
-	}
 }
 
+.activity-graph {
+	text-align: center;
+	height: 100px;
+	padding: 0;
+}
 
 .square {
 	height: 365px;
@@ -501,7 +532,7 @@ footer {
     left: 0;
     background-color: $black;
     overflow-x: hidden; 
-    padding-top: 80px; 
+    padding-top: 64px; 
     transition: 1s; 
     text-align: left;
     i {
@@ -751,4 +782,118 @@ footer {
 	box-shadow: 0 3px 6px rgba(0,0,0,.16);
 	margin: 20px 0;
 	text-align: left;
+}
+
+.user-squares {
+	margin: 0 0 20px 0;
+}
+
+.user-square, .user-square-removed {
+	height: 85px;
+	width: 85px;
+	padding: 30px 0;
+	border-radius: 5px;
+	font-weight: 500;
+	text-align: center;
+	display: inline-block;
+	margin: 5px;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.user-square {
+	color: $black;
+	&:nth-child(1) {
+		border: 3px solid $pink;
+	}
+	&:nth-child(2) {
+		border: 3px solid $blue;
+	}
+	&:nth-child(3) {
+		border: 3px solid $yellow;
+	}
+	&:nth-child(4) {
+		border: 3px solid $green;
+	}
+	&:nth-child(5) {
+		border: 3px solid $purple;
+	}				
+}
+
+.user-square-removed {
+	background: $gray;
+	color: lighten($black, 20%);
+	border: 3px solid darken($gray, 20%);
+}
+
+.user-settings-form {
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		padding: 10px 0;
+	}
+	input[type="text"] {
+		border: 1px solid $black;
+		display: inline-block;
+	}
+	input[type="checkbox"] {
+		margin: 0 20px 0 0;
+	}
+	button {
+		border-radius: 5px;
+		display: block;
+	}
+}
+
+.delete-button {
+	color: $black;
+	&:hover {
+		background: darken($gray, 20%);
+	}
+}
+
+.select-wrapper, .edit-squares {
+	@media only screen and (min-width: 641px) {
+		width: 50%;
+		display: inline-block;
+	}
+}
+
+.list-view {
+	margin: 20px 0 0 0;
+	.indv-list-item {
+		width: 100%;
+		background: white;
+		border-radius: 5px 0 0 5px;
+		text-align: left;
+		font-size: 18px;
+		position: relative;
+		padding: 0 0 10px 20px;
+		box-shadow: 0 3px 6px rgba(0,0,0,.16);
+		margin: 10px 0;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	.square-title, p, i{
+		display: inline-block;
+	}
+	.square-author {
+		&:after {
+			content: ' - ';
+		} 
+	}
+	.tutorial-status-icon-complete {
+		float: left;
+		padding: 20px 18px 0 0;
+	}
+	.indv-tutorial-list-item {
+		border-left: 5px solid $blue;
+	}
+	.tutorial-links {
+		display: inline-block;
+	}
 }
