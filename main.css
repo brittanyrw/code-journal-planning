@@ -193,6 +193,10 @@ footer {
     color: white;
     border: none; }
 
+.wireframe-info {
+  font-weight: 400;
+  color: red; }
+
 /*------------------------------------
 	DASHBOARD
 ------------------------------------*/
