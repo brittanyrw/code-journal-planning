@@ -172,6 +172,10 @@ footer {
   .signup-buttons .github-button:hover, .signup-buttons .github-form-icon:hover, .login-buttons .github-button:hover, .login-buttons .github-form-icon:hover, .settings-buttons .github-button:hover, .settings-buttons .github-form-icon:hover, .add-form-button .github-button:hover, .add-form-button .github-form-icon:hover {
     background: black; }
 
+.form-wrapper {
+  max-width: 400px;
+  margin: 0 auto; }
+
 .signup-form input[type="text"], .login-form input[type="text"], .user-settings-form input[type="text"], .add-item-form input[type="text"], .add-square-form input[type="text"] {
   width: 300px;
   padding: 15px;
@@ -180,6 +184,9 @@ footer {
   color: #333332; }
 .signup-form button, .login-form button, .user-settings-form button, .add-item-form button, .add-square-form button {
   width: 300px; }
+
+.login-form, .signup-form {
+  min-height: 350px; }
 
 .add-square-form {
   text-align: left; }

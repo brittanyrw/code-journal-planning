@@ -220,6 +220,11 @@ footer {
 	}
 }
 
+.form-wrapper {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
 .signup-form, .login-form, .user-settings-form, .add-item-form, .add-square-form {
 	input[type="text"] {
 		width: 300px;
@@ -231,6 +236,10 @@ footer {
 	button {
 		width: 300px;
 	}
+}
+
+.login-form, .signup-form {
+	min-height: 350px;
 }
 
 .add-square-form {
