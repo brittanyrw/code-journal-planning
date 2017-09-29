@@ -1,0 +1,705 @@
+/*------------------------------------
+	GENERAL
+------------------------------------*/
+* {
+  box-sizing: border-box; }
+
+body {
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #F0F1EE;
+  background: #1352A2;
+  text-align: center;
+  position: relative;
+  height: 100%; }
+
+button {
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  margin: 10px 0;
+  border: none;
+  font-size: 20px;
+  font-weight: 400;
+  border: 2px solid #1352A2; }
+  @media only screen and (min-width: 641px) {
+    button {
+      margin: 20px 10px;
+      width: 200px; } }
+
+a {
+  text-decoration: none;
+  color: #F0F1EE; }
+  a:hover {
+    color: #FFD464; }
+
+h3 {
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 16px; }
+
+.fa {
+  cursor: pointer; }
+
+.signup-button, .login-button {
+  background: #FFD464;
+  color: #1352A2;
+  outline: 2px solid #FFD464;
+  font-size: 20px;
+  font-weight: 400;
+  border: 2px solid #1352A2; }
+
+.visually-hidden {
+  /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; }
+
+body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .visually-hidden button {
+  display: none !important; }
+
+/*------------------------------------
+	HOME PAGE - NAVIGATION
+------------------------------------*/
+.main-navigation {
+  padding: 20px;
+  height: 80px; }
+  .main-navigation img {
+    height: 25px; }
+  .main-navigation a:nth-child(1) {
+    float: right;
+    font-size: 20px;
+    padding: 3px 0 0 0; }
+  .main-navigation a:nth-child(2) {
+    float: left; }
+
+/*------------------------------------
+	HOME PAGE - HEADER
+------------------------------------*/
+header {
+  padding: 20px; }
+  header h1 {
+    font-weight: 300; }
+  header div {
+    height: 300px;
+    background: gray;
+    color: white;
+    padding: 140px 0 0 0;
+    max-width: 600px;
+    margin: 20px auto 10px auto; }
+
+.demo-button {
+  background: #F97572;
+  color: #F0F1EE;
+  outline: 2px solid #F97572; }
+
+.feature-button {
+  background: #F0F1EE;
+  color: #1352A2;
+  outline: 2px solid #F0F1EE; }
+
+/*------------------------------------
+	HOME PAGE - FEATURES
+------------------------------------*/
+.features-section {
+  padding: 20px; }
+  .features-section h1 {
+    margin-top: 0; }
+
+.feature-box div {
+  height: 250px;
+  background: white;
+  color: dimgray;
+  padding: 120px 20px 20px 20px;
+  max-width: 350px;
+  margin: 20px auto; }
+@media only screen and (min-width: 641px) {
+  .feature-box {
+    display: inline-block;
+    margin: 10px 20px; } }
+
+/*------------------------------------
+	FOOTER
+------------------------------------*/
+footer {
+  color: white;
+  background: #333332;
+  padding: 20px;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 80px 0 -80px 0; }
+  footer .fa {
+    color: white;
+    padding: 0 5px; }
+  footer p {
+    float: left;
+    margin-top: 10px; }
+  footer .social-media-icons {
+    float: right; }
+
+/*------------------------------------
+	SIGN UP, LOGIN and SETTINGS PAGES
+------------------------------------*/
+.signup-buttons i, .login-buttons i, .settings-buttons i, .add-form-button i {
+  background: white;
+  color: #F0F1EE;
+  padding: 9px;
+  border-radius: 5px 0 0 5px;
+  vertical-align: top; }
+.signup-buttons button, .login-buttons button, .settings-buttons button, .add-form-button button {
+  width: 250px;
+  border-radius: 0 5px 5px 0;
+  margin: 0 0 20px 0;
+  vertical-align: top;
+  border: none;
+  color: #F0F1EE;
+  font-weight: 300; }
+.signup-buttons .twitter-button, .signup-buttons .twitter-form-icon, .login-buttons .twitter-button, .login-buttons .twitter-form-icon, .settings-buttons .twitter-button, .settings-buttons .twitter-form-icon, .add-form-button .twitter-button, .add-form-button .twitter-form-icon {
+  background: #4990E2; }
+  .signup-buttons .twitter-button:hover, .signup-buttons .twitter-form-icon:hover, .login-buttons .twitter-button:hover, .login-buttons .twitter-form-icon:hover, .settings-buttons .twitter-button:hover, .settings-buttons .twitter-form-icon:hover, .add-form-button .twitter-button:hover, .add-form-button .twitter-form-icon:hover {
+    background: #1b5daa; }
+.signup-buttons .github-button, .signup-buttons .github-form-icon, .login-buttons .github-button, .login-buttons .github-form-icon, .settings-buttons .github-button, .settings-buttons .github-form-icon, .add-form-button .github-button, .add-form-button .github-form-icon {
+  background: #333332; }
+  .signup-buttons .github-button:hover, .signup-buttons .github-form-icon:hover, .login-buttons .github-button:hover, .login-buttons .github-form-icon:hover, .settings-buttons .github-button:hover, .settings-buttons .github-form-icon:hover, .add-form-button .github-button:hover, .add-form-button .github-form-icon:hover {
+    background: black; }
+
+.form-wrapper {
+  max-width: 400px;
+  margin: 0 auto; }
+
+.signup-form input[type="text"], .login-form input[type="text"], .user-settings-form input[type="text"], .add-item-form input[type="text"], .add-square-form input[type="text"] {
+  width: 300px;
+  padding: 15px;
+  margin: 0 0 20px 0;
+  border: none;
+  color: #333332; }
+.signup-form button, .login-form button, .user-settings-form button, .add-item-form button, .add-square-form button {
+  width: 300px; }
+
+.login-form, .signup-form {
+  min-height: 350px; }
+
+.add-square-form {
+  text-align: left; }
+  .add-square-form input[type=radio] {
+    margin: 0 0 0 10px; }
+  .add-square-form select {
+    height: 48px; }
+  .add-square-form button {
+    border-radius: 5px;
+    background: #F97572;
+    color: white;
+    border: none; }
+
+/*------------------------------------
+	DASHBOARD
+------------------------------------*/
+.dashboard-body {
+  background: #F0F1EE;
+  color: #333332;
+  text-align: left; }
+  @media only screen and (min-width: 641px) {
+    .dashboard-body {
+      transition: margin-left .5s;
+      margin-left: 100px; }
+      .dashboard-body .activity-graph, .dashboard-body .activity-statistics {
+        display: inline-block;
+        width: 500px;
+        margin: 10px 3px; } }
+  .dashboard-body footer {
+    background: #1352A2; }
+
+.dashboard-navigation {
+  padding: 20px;
+  height: 80px;
+  background: #F97572;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  text-align: center; }
+  .dashboard-navigation img {
+    height: 25px; }
+  .dashboard-navigation .fa-bars {
+    float: left;
+    color: #F0F1EE; }
+  .dashboard-navigation .fa-bell {
+    float: right;
+    font-size: 1.5em;
+    color: #F0F1EE; }
+  .dashboard-navigation img {
+    margin: 0 auto; }
+  @media only screen and (min-width: 641px) {
+    .dashboard-navigation .hamburger-navigation-menu {
+      display: none; } }
+
+.dashboard {
+  text-align: center;
+  padding: 20px; }
+  .dashboard a {
+    color: #333332; }
+    .dashboard a:hover {
+      color: #FFD464; }
+
+.dashboard-statistics {
+  min-height: 150px; }
+
+.add-item-left {
+  float: left;
+  display: inline-block;
+  width: 50%; }
+
+.add-item-right {
+  float: right;
+  display: inline-block;
+  width: 50%; }
+
+.calendar {
+  min-height: 150px;
+  max-width: 90%;
+  background: white;
+  border-radius: 5px;
+  padding: 14px 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  margin: 20px auto; }
+
+.activity-graph, .square, .indv-square {
+  background: white;
+  border-radius: 5px;
+  padding: 14px 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  margin: 20px 0; }
+
+.activity-statistics {
+  height: 100px;
+  vertical-align: top; }
+
+.activity-graph {
+  text-align: center;
+  height: 100px;
+  padding: 0; }
+
+.square {
+  height: 365px;
+  width: 30%;
+  min-width: 320px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 20px 1.5%; }
+  .square .square-title {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #b3b3b1;
+    margin: 0; }
+  .square .square-progress-bar {
+    height: 25px;
+    border-radius: 5px;
+    background: #F0F1EE;
+    clear: both; }
+  .square .square-labels {
+    clear: both; }
+  .square .view-all-link {
+    float: right;
+    padding: 20px 0; }
+
+.project-square {
+  border-top: 5px solid #F97572; }
+
+.tutorial-square {
+  border-top: 5px solid #1352A2; }
+
+.square-labels ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  clear: both; }
+  .square-labels ul li {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    padding: 5px;
+    border-radius: 2px;
+    color: #F0F1EE;
+    font-size: 12px; }
+
+.sass-label, .algorithms-label {
+  background: #333332; }
+
+.react-label {
+  background: #1352A2; }
+
+.difficulty-beginner-label {
+  background: #704996; }
+
+.organization-label {
+  background: #5AAD5C; }
+
+.square-status-icon {
+  padding: 18px 0 0 0;
+  color: #333332; }
+
+.course-square {
+  border-top: 5px solid #FFD464; }
+
+.resource-square {
+  border-top: 5px solid #5AAD5C; }
+  .resource-square .resource-square-item {
+    text-align: left; }
+    .resource-square .resource-square-item h3 {
+      text-align: left; }
+
+.event-square {
+  border-top: 5px solid #704996; }
+  .event-square .square-text {
+    float: left; }
+  .event-square .square-date {
+    float: right; }
+
+.subject-square {
+  border-top: 5px solid #333332; }
+
+.resource-square i, .subject-square i {
+  float: left;
+  margin: 8px 10px 8px 0; }
+.resource-square .filter-text, .subject-square .filter-text {
+  text-align: left; }
+
+.resource-square-item a, .subject-square-item a {
+  display: block;
+  margin: 8px 0;
+  text-align: left; }
+
+.project-square-item, .tutorial-square-item, .course-square-item, .indv-project-square {
+  clear: both; }
+  .project-square-item .square-text, .tutorial-square-item .square-text, .course-square-item .square-text, .indv-project-square .square-text {
+    float: left; }
+  .project-square-item .square-detailed-text, .project-square-item .square-status-icon, .project-square-item .indv-project-square, .tutorial-square-item .square-detailed-text, .tutorial-square-item .square-status-icon, .tutorial-square-item .indv-project-square, .course-square-item .square-detailed-text, .course-square-item .square-status-icon, .course-square-item .indv-project-square, .indv-project-square .square-detailed-text, .indv-project-square .square-status-icon, .indv-project-square .indv-project-square {
+    float: right; }
+
+/*------------------------------------
+	DASHBOARD STATISTICS
+------------------------------------*/
+.blog-stats, .twitter-stats, .github-stats, .project-stats {
+  width: 100%;
+  border-radius: 2px;
+  display: inline-block;
+  color: #F0F1EE;
+  padding: 5px;
+  margin: 1px;
+  vertical-align: top; }
+  @media only screen and (min-width: 641px) {
+    .blog-stats, .twitter-stats, .github-stats, .project-stats {
+      width: 23%;
+      height: 100%;
+      padding: 20px; }
+      .blog-stats span, .twitter-stats span, .github-stats span, .project-stats span {
+        display: block;
+        font-weight: bold;
+        font-size: 30px; } }
+
+.github-stats {
+  background: #333332; }
+
+.twitter-stats {
+  background: #4990E2; }
+
+.blog-stats {
+  background: #704996; }
+
+.project-stats {
+  background: #5AAD5C; }
+
+/*------------------------------------
+	DASHBOARD NAVIGATION
+------------------------------------*/
+/* The side navigation menu */
+.side-navigation {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333332;
+  overflow-x: hidden;
+  padding-top: 64px;
+  transition: 1s;
+  text-align: left; }
+  .side-navigation i {
+    width: 35px; }
+  .side-navigation .fa {
+    color: #F0F1EE;
+    padding: 0 10px 0 0; }
+  .side-navigation li {
+    list-style: none;
+    font-size: 20px;
+    color: #818181;
+    transition: 0.3s;
+    padding: 15px 0; }
+  .side-navigation .dashboard-side-link {
+    margin-left: -10px;
+    border-radius: 2px 0 0 2px;
+    position: absolute; }
+    .side-navigation .dashboard-side-link i, .side-navigation .dashboard-side-link a {
+      color: #F0F1EE; }
+  @media only screen and (min-width: 641px) {
+    .side-navigation {
+      width: 100px;
+      left: 0;
+      text-align: center; }
+      .side-navigation li:first-child {
+        padding: 0; }
+      .side-navigation ul {
+        padding: 0 10px; }
+      .side-navigation .fa {
+        padding: 0;
+        font-size: 25px; }
+      .side-navigation a {
+        display: inline-block;
+        font-size: 16px; }
+      .side-navigation .close-button {
+        display: none; } }
+
+.open-side-navigation {
+  width: 100%;
+  transition: 1s; }
+
+.side-navigation .close-button {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px; }
+
+/*------------------------------------
+	 DASHBOARD PAGES
+------------------------------------*/
+.indv-project-square {
+  border-top: 5px solid #F97572; }
+
+.indv-subject-square {
+  border-top: 5px solid #333332; }
+
+.indv-tutorial-square {
+  border-top: 5px solid #1352A2; }
+
+.indv-course-square {
+  border-top: 5px solid #FFD464; }
+
+.indv-event-square {
+  border-top: 5px solid #704996; }
+
+.indv-resource-square {
+  border-top: 5px solid #5AAD5C; }
+
+.indv-square {
+  width: 40%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 20px 1.5%; }
+  .indv-square ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; }
+    .indv-square ul li {
+      margin: 10px 0; }
+  .indv-square .square-title {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #b3b3b1;
+    margin: 0; }
+  .indv-square .square-progress-bar {
+    height: 25px;
+    border-radius: 5px;
+    background: #F0F1EE;
+    clear: both;
+    margin: 0 0 20px 0; }
+  .indv-square .square-labels {
+    clear: both; }
+  .indv-square .view-all-link {
+    float: right;
+    padding: 20px 0; }
+  .indv-square .square-notes {
+    text-align: left;
+    background: #F0F1EE;
+    padding: 10px;
+    border-radius: 5px; }
+
+.indv-tutorial-square, .indv-course-square, .indv-event-square {
+  width: 320px; }
+
+.indv-resource-square {
+  width: 260px; }
+
+.project-links, .tutorial-links, .course-links, .event-links, .resource-links {
+  text-align: left; }
+  .project-links a, .tutorial-links a, .course-links a, .event-links a, .resource-links a {
+    display: block;
+    margin: 10px 0 0 0; }
+  .project-links i, .tutorial-links i, .course-links i, .event-links i, .resource-links i {
+    margin: 0 20px 0 0; }
+
+.indv-project-task {
+  clear: both; }
+  .indv-project-task p {
+    float: left;
+    margin: 10px 0; }
+  .indv-project-task i {
+    float: right;
+    margin: 10px 0; }
+
+.project-resource-links, h2 {
+  clear: both; }
+  .project-resource-links a, h2 a {
+    display: block;
+    text-align: left;
+    margin: 10px 0; }
+
+.tutorial-status-icon-complete, .course-status-icon-complete {
+  color: #5AAD5C;
+  float: right; }
+
+.filter {
+  background: white;
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #333332; }
+
+.tutorial-controls div, .tutorial-controls p, .course-controls div, .course-controls p, .event-controls div, .event-controls p {
+  display: inline-block; }
+.tutorial-controls p, .course-controls p, .event-controls p {
+  padding: 0 20px; }
+
+.course-details p {
+  display: inline-block; }
+.course-details p:nth-child(1) {
+  float: left; }
+.course-details p:nth-child(2) {
+  float: right; }
+
+.event-time-date, .event-address {
+  display: inline-block; }
+
+.event-time-date {
+  text-align: left;
+  float: right; }
+
+.event-address {
+  float: left;
+  text-align: left; }
+
+.settings-link {
+  margin: 80px 0 0 0; }
+
+.indv-resource-square .square-title {
+  padding: 0 0 10px 0; }
+
+/*------------------------------------
+	 USER SETTINGS
+------------------------------------*/
+.settings-title, .settings-caption {
+  text-align: left; }
+
+.user-settings, .dashboard-settings {
+  width: 100%;
+  background: white;
+  border-radius: 5px;
+  padding: 14px 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  margin: 20px 0;
+  text-align: left; }
+
+.user-squares {
+  margin: 0 0 20px 0; }
+
+.user-square, .user-square-removed {
+  height: 85px;
+  width: 85px;
+  padding: 30px 0;
+  border-radius: 5px;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  font-size: 15px;
+  cursor: pointer; }
+
+.user-square {
+  color: #333332; }
+  .user-square:nth-child(1) {
+    border: 3px solid #F97572; }
+  .user-square:nth-child(2) {
+    border: 3px solid #1352A2; }
+  .user-square:nth-child(3) {
+    border: 3px solid #FFD464; }
+  .user-square:nth-child(4) {
+    border: 3px solid #5AAD5C; }
+  .user-square:nth-child(5) {
+    border: 3px solid #704996; }
+
+.user-square-removed {
+  background: #b3b3b1;
+  color: #676764;
+  border: 3px solid #80807e; }
+
+.user-settings-form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+.user-settings-form li {
+  padding: 10px 0; }
+.user-settings-form input[type="text"] {
+  border: 1px solid #333332;
+  display: inline-block; }
+.user-settings-form input[type="checkbox"] {
+  margin: 0 20px 0 0; }
+.user-settings-form button {
+  border-radius: 5px;
+  display: block; }
+
+.delete-button {
+  color: #333332; }
+  .delete-button:hover {
+    background: #80807e; }
+
+@media only screen and (min-width: 641px) {
+  .select-wrapper, .edit-squares {
+    width: 50%;
+    display: inline-block; } }
+
+.list-view {
+  margin: 20px 0 0 0; }
+  .list-view .indv-list-item {
+    width: 100%;
+    background: white;
+    border-radius: 5px 0 0 5px;
+    text-align: left;
+    font-size: 18px;
+    position: relative;
+    padding: 0 0 10px 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    margin: 10px 0; }
+  .list-view h1 {
+    font-size: 20px; }
+  .list-view .square-title, .list-view p, .list-view i {
+    display: inline-block; }
+  .list-view .square-author:after {
+    content: ' - '; }
+  .list-view .tutorial-status-icon-complete {
+    float: left;
+    padding: 20px 18px 0 0; }
+  .list-view .indv-tutorial-list-item {
+    border-left: 5px solid #1352A2; }
+  .list-view .tutorial-links {
+    display: inline-block; }
+
+/*# sourceMappingURL=main.css.map */
