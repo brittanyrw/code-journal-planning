@@ -1,12 +1,11 @@
 # Code Journal - Planning Repo
 
+Code Journal is a work in progress. This repo will house the Adobe XD wireframes and HTML wireframes for Code Journal. Code Journal will be a responsive full-stack application for organizing learning resources for developers and programmers. It will feature a dashboard, curated content and user profiles. 
+
 * [Demo the HTML Wireframe (Homepage) Here](http://www.brittanywalker.io/code-journal-planning)
 * [Demo the HTML Wireframe (Dashboard) Here](http://www.brittanywalker.io/code-journal-planning/dashboard.html)
 
 ![Codejournal Homepage Screenshots](readme-imgs/home-screenshot.png?raw=true "Code Journal Home Screenshot")
-
-# Summary
-This repo will house the Adobe XD wireframes and HTML wireframes for Code Journal. Code Journal will be a responsive full-stack application for organizing learning resources for developers and programmers. It will feature a dashboard, curated content and user profiles. 
 
 # Technology
 
