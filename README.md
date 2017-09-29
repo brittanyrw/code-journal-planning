@@ -1,7 +1,7 @@
 # Code Journal - Planning Repo
 
-[Demo the HTML Wireframe (Homepage) Here](http://www.brittanywalker.io/code-journal-planning)
-[Demo the HTML Wireframe (Dashboard) Here](http://www.brittanywalker.io/code-journal-planning/dashboard.html)
+* [Demo the HTML Wireframe (Homepage) Here](http://www.brittanywalker.io/code-journal-planning)
+* [Demo the HTML Wireframe (Dashboard) Here](http://www.brittanywalker.io/code-journal-planning/dashboard.html)
 
 ![Codejournal Homepage Screenshots](readme-imgs/home-screenshot.png?raw=true "Code Journal Home Screenshot")
 
