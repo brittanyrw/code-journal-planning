@@ -200,10 +200,6 @@ footer {
     color: white;
     border: none; }
 
-.wireframe-info {
-  font-weight: 400;
-  color: red; }
-
 /*------------------------------------
 	DASHBOARD
 ------------------------------------*/
@@ -401,7 +397,11 @@ footer {
     .blog-stats, .twitter-stats, .github-stats, .project-stats {
       width: 23%;
       height: 100%;
-      padding: 20px; } }
+      padding: 20px; }
+      .blog-stats span, .twitter-stats span, .github-stats span, .project-stats span {
+        display: block;
+        font-weight: bold;
+        font-size: 30px; } }
 
 .github-stats {
   background: #333332; }
@@ -443,12 +443,11 @@ footer {
     transition: 0.3s;
     padding: 15px 0; }
   .side-navigation .dashboard-side-link {
-    background: #F0F1EE;
-    color: #333332;
+    margin-left: -10px;
     border-radius: 2px 0 0 2px;
     position: absolute; }
     .side-navigation .dashboard-side-link i, .side-navigation .dashboard-side-link a {
-      color: #333332; }
+      color: #F0F1EE; }
   @media only screen and (min-width: 641px) {
     .side-navigation {
       width: 100px;

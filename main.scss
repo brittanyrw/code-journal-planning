@@ -258,11 +258,6 @@ footer {
 	}
 }
 
-.wireframe-info {
-	font-weight: 400;
-	color: red;
-}
-
 
 /*------------------------------------
 	DASHBOARD
@@ -512,6 +507,11 @@ footer {
 		width: 23%;
 		height: 100%;
 		padding: 20px;
+			span {
+				display: block;
+				font-weight: bold;
+				font-size: 30px;
+			}
 	}
 }
 
@@ -564,12 +564,11 @@ footer {
 	    padding: 15px 0; 
     }
     .dashboard-side-link {
-    	background: $offwhite;
-    	color: $black;
+    	margin-left: -10px;
     	border-radius: 2px 0 0 2px;
     	position: absolute;
     	i, a {
-    		color: $black;
+    		color: $offwhite;
     	}
     }
     @media only screen and (min-width: 641px) {
