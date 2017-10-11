@@ -4,6 +4,7 @@ Code Journal is a work in progress. This repo will house the Adobe XD wireframes
 
 * [Demo the HTML Wireframe (Homepage) Here](http://www.brittanywalker.io/code-journal-planning)
 * [Demo the HTML Wireframe (Dashboard) Here](http://www.brittanywalker.io/code-journal-planning/dashboard.html)
+* [View the in-progress project code here](https://github.com/brittanyrw/codejournal)
 
 ![Codejournal Homepage Screenshots](readme-imgs/home-screenshot.png?raw=true "Code Journal Home Screenshot")
 
